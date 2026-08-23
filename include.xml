@@ -7,7 +7,7 @@
 
 	<define name="native" if="cpp" />
 
-	<define name="lime-funkin" />
+	<define name="lime-wander" />
 	<define name="lime-cairo" if="native" />
 	<define name="lime-canvas" if="html5" />
 	<define name="lime-cffi" if="native" />
