@@ -333,7 +333,7 @@ class Font
 	 *
 	 * @param size The size to set the font to.
 	 */
-	public function setSize(size:Int):Void
+	@:noCompletion private function __setSize(size:Int):Void
 	{
 		#if (lime_cffi && !macro)
 		NativeCFFI.lime_font_set_size(src, size);
@@ -350,6 +350,7 @@ class Font
 	public function renderGlyph(glyph:Glyph, ?flags:Int = 0):Image
 	{
 		#if (lime_cffi && !macro)
+		__setSize(fontSize);
 		// Allocate an estimated buffer size
 		var bytes:Bytes = Bytes.alloc(0);
 
