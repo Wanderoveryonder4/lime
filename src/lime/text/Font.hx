@@ -333,7 +333,7 @@ class Font
 	 *
 	 * @param size The size to set the font to.
 	 */
-	@:noCompletion private function __setSize(size:Int):Void
+	@:noCompletion public function __setSize(size:Int):Void
 	{
 		#if (lime_cffi && !macro)
 		NativeCFFI.lime_font_set_size(src, size);
