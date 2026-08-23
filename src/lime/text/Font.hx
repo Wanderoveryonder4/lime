@@ -347,7 +347,7 @@ class Font
 	 * @param flags Additional FreeType load flags to apply when rasterizing.
 	 * @return An `Image` instance representing the rendered glyph.
 	 */
-	public function renderGlyph(glyph:Glyph, ?flags:Int = 0):Image
+	public function renderGlyph(glyph:Glyph, fontSize:Int, ?flags:Int = 0):Image
 	{
 		#if (lime_cffi && !macro)
 		__setSize(fontSize);
